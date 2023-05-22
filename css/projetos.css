@@ -1,0 +1,48 @@
+details {
+    width: 70%;
+    margin-left: 15%;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #3a3a3a;
+    box-shadow: 4px 4px 3px rgba(0,0,0,0.15);
+}
+
+summary {
+    cursor: pointer;
+}
+summary h1 {
+    display: inline;
+    margin-left: 1rem;
+    font-size: 1.25rem;
+}
+
+details p {
+    margin-left: 1.75rem;
+    opacity: 0.7;
+}
+
+
+p7{
+    font-size: 300%;
+    color:rgb(255, 255, 255);
+    text-shadow: 5px 5px  rgb(43, 0, 255);
+    background-color: none;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .ProjetosTeste {
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        padding: 0.67em;
+        border: none;
+        overflow: hidden;
+        text-decoration: none;
+        font-size: 65%;
+        outline: none;
+        color: #FFF;
+        background: transparent;
+        font-family: 'Ubuntu', sans-serif;
+    }
+}

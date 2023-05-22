@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Roboto+Mono&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/themes/prism-okaidia.css" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+    <link rel="stylesheet" href="css/ceessiessi.css">
+    <link rel="stylesheet" href="css/sobreMim.css">
+    <link rel="stylesheet" href="css/projetos.css">
+    <title>nini.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="imagex/png" href="https://www.pngall.com/wp-content/uploads/2016/03/N-Letter-PNG-Pic.png">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 0.8em;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background-color: black;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgb(0, 255, 248);
+            background: linear-gradient(0deg, rgba(0, 255, 248, 1) 31%, rgba(0, 78, 255, 1) 66%, rgba(52, 0, 131, 1) 88%, rgba(0, 0, 0, 1) 100%);
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(255, 255, 255);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 255, 248, 1) 31%, rgba(0, 78, 255, 1) 66%, rgba(52, 0, 131, 1) 100%);
+        }
+    </style>
+    <style>
+        body {
+            background-color: #272727;
+            color: #fff;
+        }
+
+        .code-container {
+            position: relative;
+            border: 1px solid #444;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-family: Consolas, monospace;
+            background-color: #2d2d2d;
+        }
+
+        .code-header {
+            background-color: #3a3a3a;
+            padding: 5px;
+            border-bottom: 1px solid #444;
+            display: flex;
+            align-items: center;
+        }
+
+        .language-label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .copy-button {
+            background-color: #3a3a3a;
+            border: 1px solid #444;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+            color: #fff;
+
+        }
+
+        pre {
+            margin: 0;
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        code {
+            display: block;
+        }
+    </style>
+    <script>
+        function copyToClipboard(elementId) {
+            var codeSnippet = document.getElementById(elementId).textContent;
+
+            navigator.clipboard.writeText(codeSnippet).then(function () {
+                alert('Code snippet copied to clipboard!');
+            }).catch(function () {
+                alert('Unable to copy code snippet.');
+            });
+        }
+    </script>
+</head>
+
+<body style="background-color: rgb(22, 20, 24)">
+
+    <header>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="index.html"><strong>
+                        <p2>Nini.com</p2>
+                    </strong></a>
+
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">
+                                <p2>Home</p2>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <p2>Experiências</p2>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" target="_blank" href="experiencia.html">Formação</a>
+                                </li>
+                                <li><a class="dropdown-item" target="_blank" href="projetos.html">Projetos</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                    
+                        <!-- Navbar dropdown -->
+
+                    </ul>
+                    <form class="j">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <p2>Recomendações</p2>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" target="_blank"
+                                            href="S:\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\5 - Aprendizes\4 - Desenvolvimento de Sistemas\3 - Desenvolvimento de Sistemas 2023\Lander Furusho Gerotto\2023\Maio-2023\HTML\Portfolio\inedx.html">Lander</a>
+                                    </li>
+                                    <li><a class="dropdown-item" target="_blank"
+                                            href="https://felipevieirafmv.github.io/meu-portfolio/">Felipe</a>
+                                    </li>
+                                    <li><a class="dropdown-item" target="_blank"
+                                            href="S:\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\5 - Aprendizes\4 - Desenvolvimento de Sistemas\3 - Desenvolvimento de Sistemas 2023\Guilherme Rodrigues Tavares\html\projetinho\paginaPrincipal.html">Tavares</a>
+                                    </li>
+                                    <li><a class="dropdown-item" target="_blank"
+                                            href="S:\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\5 - Aprendizes\4 - Desenvolvimento de Sistemas\3 - Desenvolvimento de Sistemas 2023\Luiz Antonio Rosa Cardoso\Web\portfólio\index.html">Rosa</a>
+                                    </li>
+                                    <li><a class="dropdown-item" target="_blank"
+                                            href="S:\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\5 - Aprendizes\4 - Desenvolvimento de Sistemas\3 - Desenvolvimento de Sistemas 2023\Luis Gustavo Caris dos Santos\WEB\2023.05.16 - Portifólio\index.html">Luis</a>
+                                    </li>
+    
+                                </ul>
+                            </li>
+                        </ul>
+                    </form>
+
+                    <!-- Left links -->
+                </div>
+                <!-- Collapsible wrapper -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+    </header>
+    <main>
+        <h4>
+            <br>
+            <br>
+            <br>
+            
+            <div class="ProjetosTeste" style="text-align: center;" >
+                <p7>Projetos</p7>
+            </div>
+        
+            <br>
+            <br>
+            <br>
+            <codinglanguage style="font-size: 150%;">Python</codinglanguage><br><br><br><br>
+            <div class="block1 row fix">
+                <div class="col-12 col-md-6 text-white">
+                    Meu primeiro projeto "grande" em python foi um jogo similar ao Dino run do Chrome.<br>
+                    Porém com um cachorrinho que pula um arbusto, sua casinha, e um PATO DE BONÉ<br>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-12 col-md-6">
+                    <img src="imagensProj/Untitled video - Made with Clipchamp.gif" width="100%"
+                        style="border-radius: 8px;">
+                </div>
+            </div>
+            <br>
+
+
+        </h4>
+
+        <details>
+            <summary>
+                <h1>Visualizar Código</h1>
+            </summary>
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="language-label">Python</span>
+                    <button class="copy-button" onclick="copyToClipboard('code-snippet')">Copy</button>
+                </div>
+                <pre><code id="code-snippet" class="language-python">
+import pygame
+import os
+import random
+
+pygame.init()
+
+HEIGHT_TELA = 600
+WIDTH_TELA = 1100
+TELA = pygame.display.set_mode((WIDTH_TELA, HEIGHT_TELA))
+screen = pygame.display.set_caption("Doguinho RUN!")
+
+dog_size = (180, 100)
+szd_dog_1 = pygame.transform.scale(pygame.image.load(os.path.join('Imagens', '1.png')), dog_size)
+szd_dog_2 = pygame.transform.scale(pygame.image.load(os.path.join('Imagens', '2.png')), dog_size)
+szd_dog_3 = pygame.transform.scale(pygame.image.load(os.path.join('Imagens', '3.png')), dog_size)
+szd_dog_4 = pygame.transform.scale(pygame.image.load(os.path.join('Imagens', '4.png')), dog_size)
+szd_dog_5 = pygame.transform.scale(pygame.image.load(os.path.join('Imagens', '5.png')), dog_size)
+szd_dog_6 = pygame.transform.scale(pygame.image.load(os.path.join('Imagens', '6.png')), dog_size)
+
+CASINHA = [pygame.transform.scale(pygame.image.load(os.path.join('Imagens', 'casinha.png')), (150, 100))]
+
+PATINHO = [pygame.transform.scale(pygame.image.load(os.path.join('Imagens', '1_-_pato.png')), (60, 60)),
+           pygame.transform.scale(pygame.image.load(os.path.join('Imagens', '2_-_pato.png')), (60, 60))]
+
+CORRENDO = [szd_dog_1, szd_dog_2, szd_dog_3, szd_dog_4, szd_dog_5, szd_dog_6]
+
+PULANDO = [szd_dog_3]
+
+ARVORE = [pygame.image.load(os.path.join('Imagens', '1_-_tree.png')),
+          pygame.image.load(os.path.join('Imagens', '2_-_tree.png'))]
+
+ARBUSTINHO = [pygame.transform.scale(pygame.image.load(os.path.join('Imagens', 'bush.png')), (110, 55))]
+
+MOEDA = pygame.image.load(os.path.join('Imagens', 'coin.png'))
+
+DIAMANTE = pygame.image.load(os.path.join('Imagens', 'diamante.png'))
+
+NUVEM = pygame.transform.scale(pygame.image.load(os.path.join('Imagens', 'nuvem.png')), (200, 200))
+
+FUNDO = pygame.image.load(os.path.join('Imagens', 'floor3.png'))
+
+class Doguinho:
+
+    X_POS = 80
+    Y_POS = 451
+    PULO_VEL = 9
+    
+    def __init__(self):
+        #CHAMAR OS FRAMES DO CACHORRO CORRENDO E PULANDO
+        self.correr_img = CORRENDO
+        self.pular_img = PULANDO
+        
+        #DEFINIR A CORRIDA PARA TRUE E O PULO PARA FALSO, JÁ QUE O CACHORRO POR PADRÃO VAI ESTAR CORRENDO
+        self.dog_correr = True
+        self.dog_pular = False
+        
+        #DEFINIR A HITBOX DO CACHORRO
+        self.step_index = 0
+        self.pulo_vel = self.PULO_VEL
+        self.image = self.correr_img[0]
+        self.dog_rect = (self.image.get_rect())
+        self.dog_rect.x = self.X_POS
+        self.dog_rect.y = self.Y_POS
+    
+    def update(self, userInput):
+        
+        #FUNCAO PARA ATUALIZAR O CACHORRO A CADA LOOP
+        
+        if self.dog_correr:
+            self.correr()
+            
+        if self.dog_pular:
+            self.pular()
+    
+        if self.step_index >= 12:
+            self.step_index = 0
+        
+        #FAZER O CACHORRO PULAR MUDANDO DE ANIMACAO QUANDO APERTAR K_UP ou SPACE
+        
+        if userInput[pygame.K_UP] and not self.dog_pular:
+            self.dog_correr = False
+            self.dog_pular = True
+
+        elif userInput[pygame.K_SPACE] and not self.dog_pular:
+            self.dog_correr = False
+            self.dog_pular = True
+
+        elif not (self.dog_pular or userInput[pygame.K_DOWN]):
+            self.dog_pular = False
+            self.dog_correr = True
+
+    def correr(self):
+        self.image = self.correr_img[self.step_index // 2]
+        self.dog_rect = self.image.get_rect()
+        self.dog_rect.x = self.X_POS
+        self.dog_rect.y = self.Y_POS
+        self.step_index += 1
+
+    def pular(self):
+        self.image = self.pular_img[0]
+        if self.dog_pular:
+            self.dog_rect.y-= self.pulo_vel * 4
+            self.pulo_vel -= 0.8
+        if self.pulo_vel < - self.PULO_VEL:
+            self.dog_pular = False
+            self.pulo_vel = self.PULO_VEL
+            
+        
+    def tela(self, TELA):
+        TELA.blit(self.image, (self.dog_rect.x, self.dog_rect.y))
+            
+class Nuvem:
+    def __init__(self):
+        self.x = WIDTH_TELA + random.randint(800, 1000)
+        self.y = random.randint(30, 200)
+        self.image = NUVEM
+        self.width = self.image.get_width()
+        
+    def update(self):
+        self.x -= game_speed
+        if self.x < -self.width:
+            self.x = WIDTH_TELA + random.randint(2500, 3000)
+            self.y = random.randint(50, 100)
+        
+    def tela(self, TELA):
+        TELA.blit(self.image, (self.x, self.y))
+
+class Obstaculo:
+    def __init__(self, IMAGE, TIPO):
+        self.image = IMAGE
+        self.tipo = TIPO
+        self.rect = self.image[self.tipo].get_rect()
+        self.rect.x = WIDTH_TELA
+
+    def update(self):
+        self.rect.x -= game_speed
+        if self.rect.x < -self.rect.width:
+            obs.pop()
+
+    def tela(self, TELA):
+        TELA.blit(self.image[self.tipo], self.rect)
+
+class Casinha(Obstaculo):
+    def __init__(self, IMAGE):
+        self.TIPO = 0 #random.randint(0, 2) acredito q é pra escolher entre os cactus
+        super().__init__(IMAGE, self.TIPO)
+        self.rect.y = 450
+
+class Arbustinho(Obstaculo):
+    def __init__(self, IMAGE):
+        self.TIPO = 0 #random.randint(0, 2) acredito q é pra escolher entre os cactus
+        super().__init__(IMAGE, self.TIPO)
+        self.rect.y = 500
+        #A COORDENADA DE Y PRO OBJETO TEM Q SER A ALTURA DELE PRA FUNCIONAR A HITBOX
+
+class Patinho(Obstaculo):
+    def __init__(self, IMAGE):
+        self.TIPO = 0
+        super().__init__(IMAGE, self.TIPO)
+        self.rect.y = 490 #onde o pato aparece em y
+        self.index = 0
+
+    def tela(self, TELA):
+        #alterna a imagem do patinho entre levantado e agachado
+        if self.index >= 9:
+            self.index = 0
+        TELA.blit(self.image[self.index//5], self.rect)
+        self.index += 1
+
+def main():
+    global game_speed, x_pos_fundo, y_pos_fundo, points, obs
+    run = True
+    clock = pygame.time.Clock()
+    nuvem = Nuvem()
+    player = Doguinho()
+    game_speed = 30
+    obs = []
+    x_pos_fundo = 0
+    y_pos_fundo = 550
+    points = 0
+    font = pygame.font.Font('freesansbold.ttf', 20)
+    contador_morte = 0
+
+
+    def score():
+        #pontuacao do jogador
+        global points, game_speed, x_pos_fundo, y_pos_fundo
+        #aumentar um ponto
+        points+=1
+        #aumentar a velocidade do jogo a cada 100 pontos
+        if points % 100 == 0:
+            game_speed +=1
+
+        text = font.render('Pontos: ' + str(points), True, (0, 0, 0))
+        textRect = text.get_rect()
+        #posicionando o placar de pontos
+        textRect.center = (1000, 40)
+        TELA.blit(text, textRect)
+
+    def background():
+        global x_pos_fundo, y_pos_fundo
+        image_width = FUNDO.get_width()
+        TELA.blit(FUNDO, (x_pos_fundo, y_pos_fundo))
+        TELA.blit(FUNDO, (image_width + x_pos_fundo, y_pos_fundo))
+        if x_pos_fundo <= -image_width:
+            TELA.blit(FUNDO, (image_width + x_pos_fundo, y_pos_fundo))
+            x_pos_fundo = 0
+        x_pos_fundo -= game_speed
+
+    while run:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+                
+        TELA.fill((153, 217, 234))       
+        userInput = pygame.key.get_pressed()
+        
+        player.tela(TELA)
+        player.update(userInput)   
+
+        if len(obs) == 0:
+            if random.randint(0, 2) == 0:
+                obs.append(Arbustinho(ARBUSTINHO))
+            elif random.randint(0, 2) == 1:
+                obs.append(Casinha(CASINHA))
+            elif random.randint(0, 2) == 2:
+                obs.append(Patinho(PATINHO))
+
+        for o in obs:
+            o.tela(TELA)
+            o.update()
+            if player.dog_rect.colliderect(o.rect):
+                pygame.time.delay(700) #em milisegundos
+                contador_morte +=1
+                menu(contador_morte)
+
+        background()
+        
+        nuvem.tela(TELA)
+        nuvem.update()
+
+        score()
+
+        clock.tick(30)
+        pygame.display.update()
+    pygame.quit()
+
+def menu(contador_morte):
+
+    global points
+    run = True
+    while run:
+        TELA.fill((153, 217, 234))
+        font = pygame.font.Font('freesansbold.ttf', 30)
+
+        if contador_morte == 0:
+            text = font.render("Pressione qualquer botao para iniciar", True, (0, 0, 0,))
+
+        elif contador_morte >= 1:
+            text = font.render("Pressione qualquer botao para reiniciar", True, (0, 0, 0,))
+            score = font.render(f"Sua pontuacao: {points}", points, (0, 0, 0))
+            scoreRect = score.get_rect()
+            scoreRect.center = (WIDTH_TELA // 2, HEIGHT_TELA // 2 + 50)
+            TELA.blit(score, scoreRect)
+
+        textRect = text.get_rect()
+        textRect.center = (WIDTH_TELA // 2, HEIGHT_TELA // 2)
+        TELA.blit(text, textRect)
+        TELA.blit(CORRENDO[2], (WIDTH_TELA // 2 - 80, HEIGHT_TELA // 2 - 140))
+        pygame.display.update()
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+                pygame.quit()
+            if event.type == pygame.KEYDOWN:
+                main()
+
+menu(contador_morte = 0)
+                </code></pre>
+            </div>
+
+            <script>
+                Prism.highlightAll();
+            </script>
+
+        </details>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h4>
+            <codinglanguage style="font-size: 150%;">HTML</codinglanguage><br><br><br><br>
+            <div class="block1 row fix">
+                <div class="col-12 col-md-6 text-white">
+                    Esse projeto é meu portfólio pessoal apresentando minhas formações e falando um pouco sobre mim.<br>
+                    Estou contente com o resultado mesmo sabendo que ainda posso evoluir muito mais.<br>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-12 col-md-6">
+                    <img src="imagensProj/HomeHTML.png" width="100%"
+                        style="border-radius: 8px;">
+                </div>
+            </div>
+            <br>
+
+
+        </h4>
+
+        <details>
+            <summary>
+                <h1>Visualizar Código</h1>
+            </summary>
+            <div class="code-container">
+                <div class="code-header">
+                    <span class="language-label">HTML</span>
+                    <button class="copy-button" onclick="copyToClipboard('code-snippet')">Copy</button>
+                </div>
+                <pre><code id="code-snippet" class="language-html">
+<span class="keyword">&lt;!DOCTYPE</span> <span class="comment">html&gt;</span>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;My Colorful Code&lt;/title&gt;
+&lt;html lang="pt-br"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"&gt;&lt;/script&gt;
+        &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+        &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+        &lt;link
+        href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Roboto+Mono&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet"&gt;
+    &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+    &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"&gt;
+        &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /&gt;
+    &lt;link rel="stylesheet" href="css/ceessiessi.css"&gt;
+    &lt;link rel="stylesheet" href="css/sobreMim.css"&gt;
+    &lt;title>nini.com&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;style&gt;
+        /* width */
+        ::-webkit-scrollbar {
+            width: 0.8em;
+        }
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background-color: black;
+        }
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgb(0, 255, 248);
+            background: linear-gradient(0deg, rgba(0, 255, 248, 1) 31%, rgba(0, 78, 255, 1) 66%, rgba(52, 0, 131, 1) 88%, rgba(0, 0, 0, 1) 100%);
+            border-radius: 10px;
+        }
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(255, 255, 255);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 255, 248, 1) 31%, rgba(0, 78, 255, 1) 66%, rgba(52, 0, 131, 1) 100%);
+        }
+        &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav class="navbar navbar-expand-lg navbar-light"&gt;
+            &lt;div class="container-fluid"&gt;
+                &lt;a class="navbar-brand" href="agateemieli.html"&gt;&lt;strong&gt;
+                &lt;strong&gt;&lt;p2&gt;Nini.com&lt;/p2&gt;&lt;/strong&gt;&lt;/a&gt;
+                &lt;button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"&gt;
+                    &lt;i class="fas fa-bars"&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                    &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link active" aria-current="page" href="agateemieli.html"&gt;
+                                &lt;p2&gt;Home&lt;/p2&gt;
+                                &lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;li class="nav-item dropdown"&gt;
+                            &lt;a class="nav-link dropdown-toggle" href="#" 
+                                role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false"&gt;
+                                    &lt;p2&gt;Experiências&lt;/p2&gt;
+                                &lt;/a&gt;
+                            &lt;ul class="dropdown-menu"&gt;
+                                &lt;li&gt;&lt;a class="dropdown-item" target="_blank"
+                                    href="experiencia.html"&gt;Formação&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;&lt;a class="dropdown-item" target="_blank" 
+                                    href="projetos.html"&gt;Projetos&lt;/a&gt;
+                                &lt;/li&gt;
+
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                        &lt;li class="nav-item dropdown"&gt;
+                            &lt;a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false"&gt;
+                                &lt;p2&gt;Recomendações&lt;/p2&gt;
+                                &lt;/a&gt;
+                            &lt;ul class="dropdown-menu"&gt;
+                                &lt;li>&lt;a class="dropdown-item" target="_blank"
+                                        href="S:\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\5
+                                         - Aprendizes\4 - Desenvolvimento de Sistemas\3 - 
+                                         Desenvolvimento de Sistemas 2023\Lander Furusho Gerotto\2023\Maio-2023\HTML\Portfolio\inedx.html"&gt;
+                                         Lander&lt;/a&gt;
+                                        &lt;/li&gt;
+                                &lt;li>&lt;a class="dropdown-item" target="_blank"
+                                        href="https://felipevieirafmv.github.io/meu-portfolio/">Felipe&lt;/a&gt;
+                                        &lt;/li&gt;
+                                &lt;li>&lt;a class="dropdown-item" target="_blank"
+                                        href="S:\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\5
+                                         - Aprendizes\4 - Desenvolvimento de Sistemas\3 - Desenvolvimento de Sistemas 2023\Guilherme Rodrigues Tavares\html\projetinho\paginaPrincipal.html"&gt;
+                                         Tavares&lt;/a&gt;
+                                        &lt;/li&gt;
+                                &lt;li>&lt;a class="dropdown-item" target="_blank"
+                                        href="S:\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\5
+                                         - Aprendizes\4 - Desenvolvimento de Sistemas\3 - 
+                                         Desenvolvimento de Sistemas 2023\Luiz Antonio Rosa Cardoso\Web\portfólio\index.html"&gt;Rosa&lt;/a&gt;
+                                        &lt;/li&gt;
+                                &lt;li>&lt;a class="dropdown-item" target="_blank"
+                                        href="S:\COM\Human_Resources\01.Engineering_Tech_School\02.Internal\5
+                                         - Aprendizes\4 - Desenvolvimento de Sistemas\3 - 
+                                         Desenvolvimento de Sistemas 2023\Luis Gustavo Caris dos Santos\WEB\2023.05.16 - Portifólio\index.html"&gt;
+                                         Luis&lt;/a&gt;
+                                        &lt;/li&gt;
+
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;form class="j"&gt;
+                        &lt;a class="nav-link active" aria-current="page" target="_blank" href="contatos.html"&gt;Contatos&lt;/a&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+    &lt;main&gt;
+
+        &lt;button style=" text-shadow: 5px 5px  rgb(43, 0, 255);" class="button" type="button"
+            data-hover="Nini&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+            data-active="Nininho&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"&gt;&lt;span
+                style="text-shadow: 5px 5px  rgb(43, 0, 255);">Vinícius Lima&lt;/span>&lt;/button&gt;
+                &lt;a target='_blank' href="https://www.bosch-engineering.com/careers/students-and-pupils/"&gt;
+            &lt;p&gt;Bosch &lt;p1&gt;Engineering&lt;/p1&gt; Technical School&lt;/p&gt;
+            &lt;/a&gt;
+        &lt;div class="sobreMim"&gt;
+            &lt;br&gt;
+            &lt;br&gt;
+            &lt;br&gt;
+            &lt;br&gt;
+            &lt;h2>Sobre mim: &lt;/h2&gt;
+            &lt;br&gt;
+            &lt;br&gt;
+            &lt;h3&gt;
+               "Opa, tudo certo?"
+                &lt;br&gt;
+                &lt;br&gt;
+                &lt;/h3&gt;
+            &lt;h4&gt;
+                &lt;div class="block1 row fix"&gt;
+                    &lt;div class="col-12 col-md-6 text-white"&gt;
+                        "Sou o Vinícius, um estudante de Engenharia de computação na PUCPR e Aprendiz de
+                        Desenvolvimentos na BOSCH."
+                        &lt;/div&gt;
+                    &lt;div class="col-12 col-md-6"&gt;
+                        &lt;img class="logoBosch" src="imagens/boschzada-removebg-preview.png"&gt;
+                        &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+                &lt;br&gt;
+                &lt;br&gt;
+                &lt;div class="block1 row fix"&gt;
+                    &lt;div class="col-12 col-md-6"&gt;
+                        &lt;img class="logoF1" src="imagens/vccccccccccccccccc-removebg-preview.png"&gt;
+                        &lt;/div&gt;
+                    &lt;div class="col-12 col-md-6 text-white"&gt;
+                        "Gosto muito de programação, jogos, fórmula 1, basquete, futebol, filmes, séries,
+                        animes... resumindo, muitas coisas."
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;br&gt;
+                &lt;br&gt;
+                &lt;br&gt;
+                &lt;div class="block1 row fix"&gt;
+                    &lt;div class="col-12 col-md-6 text-white"&gt;
+                        "Tenho o objetivo de me tornar um profissional excelente e chegar onde ninguém chegou."
+                        &lt;/div&gt;
+                    &lt;div class="col-12 col-md-6"&gt;
+                        &lt;br&gt;
+                        &lt;br&gt;
+                        &lt;img class="Mergulhador" src="imagens/Meu projeto.png"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;br&gt;
+                &lt;br&gt;
+                &lt;br&gt;
+                &lt;div class="block1 row fix"&gt;
+                    &lt;div class="col-12 col-md-6"&gt;
+                        &lt;img class="Mundo" src="imagens/aaaaaaaaaaaaaaaa-removebg-preview.png"&gt;
+                        &lt;br&gt;
+                        &lt;br&gt;
+                        &lt;div&gt;
+                    &lt;div class="col-12 col-md-6 text-white"&gt;
+                        "Também gostaria de conhecer outros países e aprender novas línguas e costumes como
+                        comidas típicas ou até mesmo sobre o cotidiano que varia entre cada povo."
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/h4&gt;
+
+        &lt;/div&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+            </div>
+
+            <script>
+                Prism.highlightAll();
+            </script>
+
+        </details>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h4>Espaço reservado para futuros projetos...</h4>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </main>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <footer class="mt-5" style="background-color: black;">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row py-3">
+            <!-- footer column 1 start -->
+            
+            </div>
+            <!-- footer column 3 end -->
+          </div>
+        </div>
+      </div>
+    
+    
+      <div class="container-fluid py-3">
+        <div class="container">
+          <div class="row py-3">
+            <div class="col-md-9">
+              <p class="text-white">Nini.com</p>
+            </div>
+            <div class="col-md-3">
+              <div class="d-inline-block">
+                <div class="bg-circle-outline d-inline-block">
+                  <a href="https://www.youtube.com/@viniciuslima2662" class="text-white"><i class="fa fa-2x fa-fw fa-youtube"></i>
+            </a>
+                </div>
+    
+                <div class="bg-circle-outline d-inline-block">
+                  <a href="https://github.com/ViniMSLima" class="text-white">
+                    <i class="fa fa-2x fa-fw fa-github"></i></a>
+                </div>
+    
+                <div class="bg-circle-outline d-inline-block">
+                  <a href="https://www.linkedin.com/in/vin%C3%ADcius-lima-a56523196/" class="text-white">
+                    <i class="fa fa-2x fa-fw fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>

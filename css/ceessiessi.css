@@ -1,0 +1,197 @@
+body {
+    background-color: rgb(5, 5, 45);
+
+}
+
+header{
+    color: white;
+}
+
+
+main {
+    min-height: 817px;
+}
+
+h1 {
+    margin-top: 10%;
+}
+
+p {
+    font-size: 200%;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    margin-left: 14%;
+    transition: 0.4s;
+}
+
+p:hover {
+    font-size: 220%;
+    transition: 0.4s;
+}
+
+p1 {
+    font-family: 'Italianno', cursive;
+    font-size: 180%;
+}
+
+p2{
+    color: white;
+}
+
+/* .Vinícius Lima - Nini - Nininho */
+
+.button {
+    display: inline-block;
+    position: relative;
+    margin-left: 10%;
+    margin-top: 10%;
+    padding: 0.67em;
+    border: none;
+    overflow: hidden;
+    text-decoration: none;
+    font-size: 600%;
+    outline: none;
+    color: #FFF;
+    background: transparent;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.button span {
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.button:before,
+.button:after {
+    content: '';
+    position: absolute;
+    top: 0.67em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: .4s, opacity .6s;
+    -moz-transition: .4s, opacity .6s;
+    -o-transition: .4s, opacity .6s;
+    transition: .4s, opacity .6s;
+}
+
+/* :before */
+
+.button:before {
+    content: attr(data-hover);
+    -webkit-transform: translate(-150%, 0);
+    -moz-transform: translate(-150%, 0);
+    -ms-transform: translate(-150%, 0);
+    -o-transform: translate(-150%, 0);
+    transform: translate(-150%, 0);
+}
+
+/* :after */
+
+.button:after {
+    content: attr(data-active);
+    -webkit-transform: translate(150%, 0);
+    -moz-transform: translate(150%, 0);
+    -ms-transform: translate(150%, 0);
+    -o-transform: translate(150%, 0);
+    transform: translate(150%, 0);
+}
+
+/* Span on :hover and :active */
+
+.button:hover span,
+.button:active span {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    -o-transform: scale(0.3);
+    transform: scale(0.3);
+}
+
+/*  
+    We show :before pseudo-element on :hover 
+    and :after pseudo-element on :active 
+*/
+
+.button:hover:before,
+.button:active:after {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition-delay: .4s;
+    -moz-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+
+/* 
+  We hide :before pseudo-element on :active
+*/
+
+.button:active:before {
+    -webkit-transform: translate(-150%, 0);
+    -moz-transform: translate(-150%, 0);
+    -ms-transform: translate(-150%, 0);
+    -o-transform: translate(-150%, 0);
+    transform: translate(-150%, 0);
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+@media only screen and (max-width: 600px) {
+    .button {
+        display: inline-block;
+        position: relative;
+        margin-left: 10%;
+        margin-top: 10%;
+        padding: 0.67em;
+        border: none;
+        overflow: hidden;
+        text-decoration: none;
+        font-size: 250%;
+        outline: none;
+        color: #FFF;
+        background: transparent;
+        font-family: 'Ubuntu', sans-serif;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.img1 {
+    width: 80px;
+    margin-left: 95%;
+    top: 250px;
+    position: relative;
+}
+
+.img1:hover {
+    transform: scale(1.15);
+    transition: 0.3s;
+}
+
+.j {
+    margin-right: 20px;
+}
+
+footer{
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+

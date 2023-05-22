@@ -1,0 +1,63 @@
+h2 {
+    font-size: 200%;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    margin-left: 14%;
+    margin-top: 14%;
+    transition: 0.4s;
+}
+
+h2:hover {
+    font-size: 220%;
+    transition: 0.4s;
+}
+
+h3 {
+    font-size: 200%;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    margin-left: 14%;
+
+}
+
+h4 {
+    font-size: 200%;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    margin-left: 14%;
+    margin-right: 14%;
+    text-align: center;
+}
+
+
+.fix {
+    width: 100%;
+}
+
+.block1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.block2 {
+    width: 100%;
+    display: flex;
+}
+
+.logoBosch {
+    width: 70%;
+}
+
+.logoF1 {
+    width: 70%;
+}
+
+
+.Mergulhador {
+    width: 55%;
+}
+
+.Mundo {
+    width: 70%;
+}
